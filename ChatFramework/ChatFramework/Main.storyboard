@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Message View Controller-->
+        <scene sceneID="vqG-S3-Oh0">
+            <objects>
+                <viewController storyboardIdentifier="MessageViewController" id="AeX-BP-zEJ" customClass="MessageViewController" customModule="ChatFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbq-3U-1gf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JYP-cT-R35"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hSD-e2-IMC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD5-t8-yk2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="3510"/>
+        </scene>
+        <!--Jitsi Meet View Controller-->
+        <scene sceneID="MWS-YT-3I4">
+            <objects>
+                <viewController storyboardIdentifier="JitsiMeetViewController" id="PrD-HF-j48" customClass="JitsiMeetViewController" customModule="ChatFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xV1-lf-n0H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOL-Z4-lxe" customClass="JitsiMeetView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="ApX-EL-jK5"/>
+                                    <constraint firstAttribute="width" constant="414" id="bWj-e0-kZV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3xa-4v-lfg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3xa-4v-lfg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pOL-Z4-lxe" secondAttribute="trailing" id="8r7-D5-ZI5"/>
+                            <constraint firstItem="pOL-Z4-lxe" firstAttribute="leading" secondItem="3xa-4v-lfg" secondAttribute="leading" id="FC4-Ym-Ztl"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pOL-Z4-lxe" secondAttribute="bottom" id="Vh3-Mp-RIx"/>
+                            <constraint firstItem="pOL-Z4-lxe" firstAttribute="top" secondItem="xV1-lf-n0H" secondAttribute="top" id="uZj-tl-zHa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="meetView" destination="pOL-Z4-lxe" id="PAG-VS-Sib"/>
+                        <outlet property="meetViewHeight" destination="ApX-EL-jK5" id="On2-EK-ORm"/>
+                        <outlet property="meetViewWidth" destination="bWj-e0-kZV" id="fe4-mv-457"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w7-fD-UNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3051" y="3510"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
